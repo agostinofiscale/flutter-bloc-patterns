@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 
 /// Base class for details events.
 @immutable
-sealed class DetailsEvent with EquatableMixin {
+abstract class DetailsEvent with EquatableMixin {
   const DetailsEvent();
 }
 
