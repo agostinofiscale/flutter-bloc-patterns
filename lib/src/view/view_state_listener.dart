@@ -79,7 +79,9 @@ class ViewStateListener<T, B extends BlocBase<ViewState<T>>>
               Data<T>(value: final value) =>
                 (onData ?? onSuccess)?.call(context, value),
               Empty<T>() => onEmpty?.call(context),
-              Failure<T>(error: final value) => onError?.call(context, value)
+              Failure<T>(error: final value) => onError?.call(context, value),
+              // TODO: Handle this case.
+              ViewState<T>() => throw UnimplementedError(),
             };
           },
         );

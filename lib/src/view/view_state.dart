@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 
 /// Base class for states.
 @immutable
-sealed class ViewState<T> with EquatableMixin {
+abstract class ViewState<T> with EquatableMixin {
   const ViewState();
 
   @override
